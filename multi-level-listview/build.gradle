@@ -17,3 +17,17 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.gp03trxm'
+                artifactId = 'android-multi-level-listview'
+                version = '1.0'
+            }
+        }
+    }
+}

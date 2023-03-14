@@ -1,21 +1,20 @@
+apply plugin: 'maven-publish'
+
 buildscript {
     repositories {
         jcenter()
-        maven {
-            url 'http://dev.open-rnd.net:30844/content/groups/public/'
-        }
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:4.0.2'
+
     }
 }
 
 allprojects {
     repositories {
         jcenter()
-        maven {
-            url 'http://dev.open-rnd.net:30844/content/groups/public/'
-        }
+        google()
     }
 }
 
